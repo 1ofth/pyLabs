@@ -25,20 +25,3 @@ def fx(words: List[str]) -> List[str]:
 # [(1, 7), (1, 3), (3, 4, 5), (2, 2)] -> [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
 def sort_pairs(pairs: List[Tuple[int, int]]) -> List[Tuple[int, int]]:
     return sorted(pairs, key=lambda i: i[-1])
-
-
-def test(res, expt):
-    print(f'returns: {res}')
-    print(f'supposed to return: {expt}')
-    print('ОК') if res == expt else print('FAIL')
-
-
-def main():
-    test(me('tam tut mem'), 2)
-    test(fx(['tix', 'xyz', 'apple', 'xacadu', 'aabbbccc']), ['xacadu', 'xyz', 'aabbbccc', 'apple', 'tix'])
-    test(sort_pairs([(1, 7), (1, 3), (3, 4, 5), (2, 2)]), [(2, 2), (1, 3), (3, 4, 5), (1, 7)])
-
-
-if __name__ == '__main__':
-    main()
-    print("Everything passed")
